@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body,ul,li,input{padding:0;margin:0;}
+        .all{width: 100%;min-height: 2400px;}
+        .top{waidth:100%;height: 117px;}
+        .menu{width: 100%;height: 40px;background:  #272727}
+        .menu_content{margin: 0 auto; width: 1200px; height: 100%;}
+        .menu_content_left{float: left;}
+        .menu_content_left ul li{float: left;list-style: none;font-size:12px;color:#8C8C8C;line-height: 40px;margin-right: 5px;}
+        span{margin-left: 5px;}
+        .menu_content_right{float: right;}
+        .menu_content_right ul li{float: left;list-style: none;font-size:12px;color:#8C8C8C;line-height: 40px;margin-right: 5px;}
+        .gouwuche{height: 40px; color: #8C8C8C; font-size: 12px; line-height: 40px; width: 100px; text-align: center; background-color:#444;margin-left: 20px;position: relative;float: right;}
+        .gouwuche img{width: 18px; vertical-align: middle; margin-right: 2px}
+        .menu_content_right ul{float: left;}
+        .gouwuche_con{float: right;width: 180px;height: 60px;background-color: #fff; box-shadow: 0 1px 5px #ccc;display:none; text-align: center;line-height: 60px;font-size: 14px;position: relative;z-index:1;}
+
+        .gouwuchesp{color:#ea990b;}
+        .gouwuchebg{background: #fff;}
+ /* 以上是菜单栏的样式*/
+        
+        .contentbg{width: 100%;height: 80px;background-color: #fff; }
+        .content{width: 1200px;height: 80px;margin: 0 auto;}
+        .content_left{height: 80px;width: 55px;float:left;}
+        .content_left img{padding-top: 14px;}
+        .content_middle{width:600px; height:80px;float: left;margin-left: 150px;}
+        .content_middle ul li{list-style: none;float:left;padding:0 8px;font-size: 15px;line-height: 70px;text-align: center; margin-top:10px; }
+        .content_right{height: 60px;width: 350px;float: right;padding-top:20px;}
+        .content_middle a{text-decoration: none;color:#000;}
+        .content_middle_con{width: 100%;height: 250px;background: #fff; border-top: 1px solid #ccc;box-shadow: 0 2px 5px #ccc;display: none;position:absolute;}
+        .middle_ul_1{width: 1200px;height: 250px;margin: 0 auto;list-style: none;display:none;}
+        .middle_ul_1_top{width: 50px;height: 20px;border:1px solid #f35400;font-size: 15px; text-align: center;line-height: 20px; margin-left:                            95px;}
+        .middle_ul_1_middle{width:247.3px;height: 170px;}
+        .middle_ul_1_middle_img{height: 170px;float: left;}
+        .middle_ul_1_middle_sp{border-right: 1px solid #ccc;width: 1px;height: 150px;float: left;margin-top: 10px;margin-left: -2px;}
+        .middle_ul_1_bottom{height: 45px;width: 247.3px;}
+        .middle_ul_1_bottom p{text-align: center;font-size: 10px;height: 8px;color:#f35400;}
+        .middle_ul_1_bottom p:first-child{margin-top: 15px;color:#555;}
+        .middle_ul_1 li{float:left;width: 274.3px;}
+        .contentbg2{width:100%;height: 480px;}
+        .content_right_inp{width: 220px;height:40px;float: right;border: 1px solid #ccc}
+        .fangdajin{height: 30px;width: 40px;border: 1px solid #ccc;float: right;background-color:#fff;padding-top: 10px;text-align:                                  center;margin-left:-1px;}
+        .content_right a{position:absolute;font-size: 12px;text-decoration: none;top:190px;background-color: #eee;color:#aaa;padding: 1px 4px;}
+        .content_right_a1{right: 130px;}
+        .content_right_a2{right: 190px;}
+        .content_right a:hover{color:darkorange}
+        .fangdajin:hover{background-color:darkorange;border-color:darkorange;}
+/*以上是搜索栏的样式*/
+        .content2{width:1200px;height:500px;margin:0 auto;list-style: none;}
+        .content2_left ul li{width:200px;height:60px;background-color:#125;line-height: 60px;color:#fff;}
+        .content2_sp1{padding-left:20px;}
+        .content2_sp2{padding-right:20px;float:right;}
+        .content2_left{width:200px;height:480px;float:left;}
+        .content2_right{width:1000px;height:480px;float:left;display:none;background-color:#ccc;}
+        .content2_right img{height: 480px;}
+        .content2_right ul{display: none;}
+        .content2_left ul li:hover{background:#ee0;}
+        
+    </style>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="all">
+        <div class="top">
+            <img src="top.png">
+        </div>
+        <div class="menu">
+            <div class="menu_content">
+                <div class="menu_content_left">
+                    <ul>
+                        <li>小米商城<span>|</span></li>
+                        <li>MIUI<span>|</span></li>
+                        <li>米聊<span>|</span></li>
+                        <li>游戏<span>|</span></li>
+                        <li>多看阅读<span>|</span></li>
+                        <li>云服务<span>|</span></li>
+                        <li>金融<span>|</span></li>
+                        <li>米币<span>|</span></li>
+                        <li>小米商城手机版<span>|</span></li>
+                        <li>问题反馈<span>|</span></li>
+                        <li>Select Region</li>
+                    </ul>
+                </div>
+                <div class="menu_content_right">
+                    <ul>
+                        <li>登录<span>|</span></li>
+                        <li>注册<span>|</span></li>
+                        <li>消息通知</li>
+                        
+                    </ul>
+                    <a href="http://www.swu.edu.cn"><div class="gouwuche">
+                        <img src="gouwuche-hui.png">
+                        <span>购物车</span>
+                        <div class="gouwuche_con">
+                            添加的商品
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbg">
+            <div class="content">
+                <div class="content_left">
+                    <img src="logo.png">
+                </div>
+                <div class="content_middle">
+                    <ul >
+                        <li ><a href="http://www.swu.edu.cn">小米手机</a></li>
+                        <li><a href="http://www.swu.edu.cn">红米</a></li>
+                        <li><a href="http://www.swu.edu.cn">平板·笔记本</a></li>
+                        <li><a href="http://www.swu.edu.cn">路由器</a></li>
+                        <li><a href="http://www.swu.edu.cn">智能硬件</a></li>
+                        <li><a href="http://www.swu.edu.cn">服务</a></li>
+                        <li><a href="http://www.swu.edu.cn">社区</a></li>
+                        <li><a href="http://www.swu.edu.cn">电视</a></li>
+                        <li><a href="http://www.swu.edu.cn">盒子·影音</a></li>
+                    </ul>
+                </div>
+                <div class="content_right">
+                    <div class="fangdajin"><img src="fangdajing-hui.png"></div>
+                    <input type="text" class="content_right_inp"/>
+                    <a class="content_right_a1" href="http://www.swu.edu.cn">MI9限量</a>
+                    <a class="content_right_a2" href="http://www.swu.edu.cn">NoteX1折</a>
+                </div>
+            </div>
+        </div>
+        <div class="content_middle_con">
+           <ul class="middle_ul_1">
+               <li>
+                    <div class="middle_ul_1_top">
+                       新品
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+                              <li>
+                    <div class="middle_ul_1_top">
+                       新品
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+                              <li>
+                    <div class="middle_ul_1_top">
+                       新品
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+                              <li>
+                    <div class="middle_ul_1_top">
+                       新品
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+           </ul>
+            <ul class="middle_ul_1">
+               <li>
+                    <div class="middle_ul_1_top">
+                       爆款
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+                <li>
+                    <div class="middle_ul_1_top">
+                       爆款
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+                <li>
+                    <div class="middle_ul_1_top">
+                       爆款
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+                <li>
+                    <div class="middle_ul_1_top">
+                       爆款
+                    </div>
+                    <div class="middle_ul_1_middle">
+                       <img class="middle_ul_1_middle_img" src="note2320x220.png">
+                       <span class="middle_ul_1_middle_sp"></span>
+                    </div>
+                    <div class="middle_ul_1_bottom">
+                       <p>MIX小米</p>
+                       <p>售价2999</p>
+                    </div>
+               </li>
+           </ul>
+        </div>
+        <div class="contentbg2">
+           <div class="content2">
+              <div class="content2_left">
+                   <ul>
+                       <li><span class="content2_sp1">耳机 音响</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">保护膜 贴膜</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">线材 支架</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">存储卡</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">箱包</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">服饰 眼镜 鞋</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">米兔</span><sapn class="content2_sp2">&gt</sapn></li>
+                       <li><span class="content2_sp1">生活周边</span><sapn class="content2_sp2">&gt</sapn></li>
+
+                   </ul>
+               </div>
+           
+               <div class="content2_right">
+                   <ul>
+                       <li><img src="%E4%BD%99%E4%B8%8B%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96.jpg"></li>
+                   </ul>
+                   <ul>
+                       <li><img src="%E4%BD%99%E4%B8%8B%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96.jpg"></li>
+                   </ul>
+                   <ul>
+                       <li><img src="%E4%BD%99%E4%B8%8B%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96.jpg"></li>
+                   </ul>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){$(".gouwuche").mouseover(function(){$(".gouwuche img").attr("src","gouwuche-huang.png");
+                                                         $(".gouwuche span").addClass("gouwuchesp");
+                                                         $(".gouwuche").addClass("gouwuchebg");
+                                                         $(".gouwuche_con").slideDown();
+                                                        })
+                    $(".gouwuche").mouseout(function(){$(".gouwuche img").attr("src","gouwuche-hui.png");
+                                                         $(".gouwuche span").removeClass("gouwuchesp");
+                                                         $(".gouwuche").removeClass("gouwuchebg");
+                                                        })
+                    $("body").mouseover(function(e){ if($(e.target).closest(".gouwuche").length==0){$(".gouwuche_con").slideUp()}
+                                                        })
+  //    上面是购物车的动画
+                    
+                    $(".content_middle ul li").mouseover(function(){$(".content_middle_con").slideDown();
+                                                        var $t=$(this);
+                                                        var $t_index=$t.index();
+                                                        $(".middle_ul_1").hide().eq($t_index).show();
+                                                        })
+                    $(".contentbg").mouseover(function(e){if($(e.target).closest(".content_middle ul li").length==0)
+                                                            {$(".content_middle_con").slideUp()}
+                                                         })
+                    $(".content2").mouseover(function(){$(".content_middle_con").slideUp()
+                                                        })
+//  上面是content的动画
+                    
+                    $(".fangdajin").mouseover(function(){$(".fangdajin img").attr("src","fangdajing-bai.png");
+                                                        })
+//  上面是放大镜的动画
+                    
+                    $(".content2 ul li").mouseover(function(){$(".content2_right").slideDown();
+                                                        var $t=$(this);
+                                                        var $t_index=$t.index();
+                                                        $(".content2_right ul").hide().eq($t_index).show();
+                                                        })
+                    $("body").mouseover(function(e){if($(e.target).closest(".content2").length==0)
+                                                            {$(".content2_right").slideUp()}
+                                                        })
+//上面是content2的动画
+                    
+                    })
+
+    </script>
+</body>
+</html> 
